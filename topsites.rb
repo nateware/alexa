@@ -2,10 +2,12 @@
 
 #
 # Pull report of Alexa Top Sites and spit out a CSV
-# Must setup AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY env vars
+#
+# You must setup AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY env vars
 # Windows instructions: http://www.itechtalk.com/thread3595.html
 #
-# Author: Nate Wiger <nateware@amazon.com>
+# Author: Nate Wiger
+# Github: https://github.com/nateware/alexa
 # Created: July 31, 2013
 #
 
@@ -57,7 +59,7 @@ class TopSites
 
     # These must be Windows or Linux environment variables (security)
     @access_key_id     = ENV['AWS_ACCESS_KEY_ID']     || raise("Missing AWS_ACCESS_KEY_ID environment variable")
-    @secret_access_key = ENV['AWS_SECRET_ACCESS_KEY'] || raise("Missing AWS_ACCESS_KEY_ID environment variable")
+    @secret_access_key = ENV['AWS_SECRET_ACCESS_KEY'] || raise("Missing AWS_SECRET_ACCESS_KEY environment variable")
   end
 
   # Do it
